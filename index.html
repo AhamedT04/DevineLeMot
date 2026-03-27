@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Guess The Word - Version Web (JS)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Mini jeu de lettres</p>
+          <h1>Devine le mot</h1>
+          <p class="hero-copy">
+            Choisis ton pseudo et le niveau, joue ta manche, puis relance une
+            nouvelle partie depuis l'ecran de resultat.
+          </p>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-box">
+            <span class="stat-label">Serie</span>
+            <strong id="streak" class="mono">0</strong>
+          </div>
+          <div class="stat-box">
+            <span class="stat-label">Meilleur</span>
+            <strong id="bestScoreHero" class="mono">0</strong>
+          </div>
+        </div>
+      </section>
+
+      <section id="setupScreen" class="card screen screen-active">
+        <h2>Nouvelle partie</h2>
+        <div class="setup-grid">
+          <label class="field">
+            <span>Pseudo</span>
+            <input id="pseudo" placeholder="Ton pseudo" />
+          </label>
+
+          <label class="field">
+            <span>Niveau</span>
+            <select id="level">
+              <option value="facile">Facile</option>
+              <option value="moyen" selected>Moyen</option>
+              <option value="difficile">Difficile</option>
+            </select>
+          </label>
+        </div>
+        <div class="row">
+          <button id="startBtn">Lancer la partie</button>
+          <span id="setupMessage" class="muted"></span>
+        </div>
+      </section>
+
+      <section id="gameScreen" class="card game-card screen screen-hidden">
+        <div class="row meta">
+          <div>Joueur : <span id="playerName" class="mono">-</span></div>
+          <div>Niveau : <span id="currentLevel" class="mono">-</span></div>
+          <div>Statut : <span id="status" class="pill">En cours</span></div>
+        </div>
+
+        <div class="progress-wrap">
+          <div class="progress-label">
+            <span>Mot en cours</span>
+            <span id="wordLength" class="mono">0 lettres</span>
+          </div>
+          <div class="progress-track" aria-hidden="true">
+            <div id="progressBar" class="progress-bar"></div>
+          </div>
+        </div>
+
+        <div id="masked" class="board mono">_ _ _ _ _</div>
+
+        <div class="row stats">
+          <div>Tentatives restantes : <span id="tries" class="mono">-</span></div>
+          <div>Lettres proposees : <span id="letters" class="mono">-</span></div>
+        </div>
+
+        <div class="row stats">
+          <div>Score total : <span id="scoreTotal" class="mono">0</span></div>
+          <div>Score manche : <span id="scorePartie" class="mono">0</span></div>
+          <div>Precision : <span id="accuracy" class="mono">0%</span></div>
+        </div>
+
+        <div class="row input-row">
+          <input id="letter" maxlength="1" placeholder="lettre a-z" />
+          <button id="tryBtn">Proposer</button>
+          <button id="hintBtn" class="ghost" disabled>Indice</button>
+          <button id="resetBtn" class="ghost">Reinitialiser les scores locaux</button>
+        </div>
+
+        <div id="feedback" class="feedback muted"></div>
+
+        <div id="keyboard" class="keyboard" aria-label="Clavier du jeu"></div>
+      </section>
+
+      <section id="resultScreen" class="card screen screen-hidden">
+        <h2 id="resultTitle">Resultat</h2>
+        <p id="resultSummary" class="hero-copy"></p>
+        <div class="result-grid">
+          <div class="stat-box">
+            <span class="stat-label">Mot</span>
+            <strong id="resultWord" class="mono">-</strong>
+          </div>
+          <div class="stat-box">
+            <span class="stat-label">Score manche</span>
+            <strong id="resultScore" class="mono">0</strong>
+          </div>
+          <div class="stat-box">
+            <span class="stat-label">Score total</span>
+            <strong id="resultTotal" class="mono">0</strong>
+          </div>
+        </div>
+        <div class="row">
+          <button id="restartBtn">Nouvelle partie</button>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="row meta">
+          <div>Meilleur score : <span id="bestPseudo" class="mono">-</span> (<span id="bestScore" class="mono">0</span>)</div>
+          <div>Dernieres parties</div>
+        </div>
+        <ol id="recentList" class="mono score-list"></ol>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
