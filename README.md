@@ -82,5 +82,5 @@ http://localhost:8000
 
 ## NB 
 !!! 
-J'ai fait ce mini jeu principalement avec l'IA juste pour le fun et laisser mon frere s'entrainer sur les jeu de mots 
+J'ai fait ce mini jeu a ete creer par moi a l'aide d'outil d'intelligence artificielle juste pour le fun et laisser mon frere s'entrainer sur les jeu de mots 
 Libre a vous de le modifier comme il vous convient ou je changer la difficulter des mots dans le fichier de texte
