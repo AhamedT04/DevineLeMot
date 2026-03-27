@@ -20,7 +20,7 @@ Tu peux recuperer les fichiers de deux manieres.
 Si Git est installe:
 
 ```bash
-git clone https://github.com/TON-UTILISATEUR/GuessTheWordWASM.git
+https://github.com/AhamedT04/DevineLeMot.git
 ```
 
 Puis ouvrir le dossier du projet.
