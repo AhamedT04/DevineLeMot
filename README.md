@@ -4,6 +4,27 @@ Petit jeu de mots en JavaScript, jouable directement dans le navigateur.
 
 Le joueur choisit d'abord son pseudo et son niveau de difficulte, puis tente de deviner un mot lettre par lettre. A la fin de la manche, un ecran de resultat indique si la partie est gagnee ou perdue, avec le score obtenu.
 
+## Recuperer le projet
+
+Tu peux recuperer les fichiers de deux manieres.
+
+### Option 1: telecharger le projet en ZIP
+
+1. Ouvrir la page du depot GitHub
+2. Cliquer sur `Code`
+3. Cliquer sur `Download ZIP`
+4. Extraire le fichier ZIP dans un dossier
+
+### Option 2: cloner le depot
+
+Si Git est installe:
+
+```bash
+git clone https://github.com/TON-UTILISATEUR/GuessTheWordWASM.git
+```
+
+Puis ouvrir le dossier du projet.
+
 ## Fonctionnalites
 
 - Ecran de configuration avant la partie
@@ -23,24 +44,27 @@ Le joueur choisit d'abord son pseudo et son niveau de difficulte, puis tente de 
 
 ## Lancer le projet en local
 
-Comme le jeu charge les mots depuis le dossier `words/`, il vaut mieux utiliser un petit serveur local.
+Il y a deux facons simples de lancer le jeu.
 
-### Option 1: avec VS Code
+### Option 1: double-clic sur le fichier HTML
 
-1. Installer l'extension `Live Server`
-2. Ouvrir le dossier du projet
-3. Faire clic droit sur `index.html`
-4. Cliquer sur `Open with Live Server`
+1. Mettre `index.html`, `style.css`, `script.js` et le dossier `words/` dans le meme dossier principal
+2. Ouvrir ce dossier
+3. Double-cliquer sur `index.html`
 
-### Option 2: avec Python
+Si le navigateur accepte le chargement local des fichiers, le jeu fonctionne directement.
 
-Si Python est installe:
+### Option 2: avec un petit serveur local
+
+Si le chargement local ne fonctionne pas correctement, utiliser un serveur local.
+
+Avec Python installe:
 
 ```bash
 python -m http.server 8000
 ```
 
-Puis ouvrir:
+Puis ouvrir dans le navigateur:
 
 ```text
 http://localhost:8000
@@ -56,57 +80,7 @@ http://localhost:8000
 6. A la fin, consulter l'ecran de victoire ou de defaite
 7. Cliquer sur `Nouvelle partie` pour revenir a l'ecran de configuration
 
-## Publication sur GitHub
-
-### Initialiser git dans le dossier
-
-```bash
-git init
-git add .
-git commit -m "Initial commit"
-```
-
-### Creer un depot GitHub
-
-Creer un nouveau repository sur GitHub, par exemple:
-
-```text
-GuessTheWordWASM
-```
-
-Ne pas cocher l'option pour ajouter un README distant, puisque ce projet en contient deja un.
-
-### Connecter le depot local au depot GitHub
-
-Remplacer `TON-UTILISATEUR` par ton nom GitHub:
-
-```bash
-git branch -M main
-git remote add origin https://github.com/TON-UTILISATEUR/GuessTheWordWASM.git
-git push -u origin main
-```
-
-## Deploiement GitHub Pages
-
-Tu peux aussi heberger le jeu avec GitHub Pages.
-
-1. Push le projet sur GitHub
-2. Aller dans `Settings`
-3. Aller dans `Pages`
-4. Choisir la branche `main`
-5. Choisir le dossier `/root`
-6. Enregistrer
-
-Le jeu sera ensuite disponible sur une URL du type:
-
-```text
-https://TON-UTILISATEUR.github.io/GuessTheWordWASM/
-```
-
-## Ameliorations possibles
-
-- Ajouter un vrai mode multimanche
-- Ajouter des categories de mots
-- Ajouter des animations de victoire et defaite
-- Ajouter des effets sonores
-- Ajouter un classement en ligne
+## NB 
+!!! 
+J'ai fait ce mini jeu principalement avec l'IA juste pour le fun et laisser mon frere s'entrainer sur les jeu de mots 
+Libre a vous de le modifier comme il vous convient ou je changer la difficulter des mots dans le fichier de texte
