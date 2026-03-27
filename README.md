@@ -1,4 +1,4 @@
-# Guess The Word WASM
+# Guess The Word 
 
 Petit jeu de mots en JavaScript, jouable directement dans le navigateur.
 
@@ -20,7 +20,7 @@ Tu peux recuperer les fichiers de deux manieres.
 Si Git est installe:
 
 ```bash
-git clone https://github.com/TON-UTILISATEUR/GuessTheWordWASM.git
+git clone https://github.com/AhamedT04/DevineLeMot.git
 ```
 
 Puis ouvrir le dossier du projet.
