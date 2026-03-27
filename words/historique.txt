@@ -1,0 +1,7 @@
+oumve;robe;defaite;8
+oumvr;rue;victoire;4
+667;0;sport;facile;defaite;8
+oumvr;0;tasse;facile;defaite;8
+oumvr;67;nuage;facile;victoire;6
+oumvr;0;école;facile;defaite;8
+Ahamed;121;tigre;facile;victoire;3
